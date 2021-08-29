@@ -1,0 +1,67 @@
+window-header, window-header * {
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+window-header {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 43px;
+  flow: horizontal;
+  border: 2px solid #361712;
+  background: linear-gradient(top, #895F49, #321311);
+}
+
+window-icon {
+  margin-left: 8px;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  background: url("../png/logo-24x24.png");
+  transform: translate(0, -3px);
+}
+
+window-caption {
+  display: block;
+  width: *;
+  height: 36px;
+  color: white;
+  font-family: Arial;
+  text-shadow: -1px -1px 0 #000, 0 -1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000, 0 1px 0 #000, -1px 1px 0 #000, -1px 0 0 #000;
+}
+
+window-buttons {
+  display: block;
+  width: calc(108px + 3px + 32px);
+  height: 36px;
+  flow: horizontal;
+  border-spacing: 3px;
+  justify-content: space-around;
+}
+
+window-button {
+  vertical-align: middle;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #361712;
+  border-radius: 50%;
+  background: linear-gradient(50% 100%, #40474D, #3E454B, #6F767C);
+  cursor: pointer;
+  behavior: clickable;
+  color: white;
+  text-align: center;
+  line-height: 32px;
+}
+
+window-button:hover {
+  color: #4ECCFF;
+}
+
+window-button:active {
+  padding-top: 1px;
+  background: linear-gradient(50% 100%, #6F767C, #3E454B, #40474D);
+}

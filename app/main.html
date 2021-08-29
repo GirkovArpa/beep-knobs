@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html window-icon="png/logo-24x24.png" window-frame="extended">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Beep Knobs</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/chrome.css" rel="stylesheet">
+    <script src="js/main.js" type="module"></script>
+  </head>
+  <window-header>
+    <window-icon role="window-icon" />
+    <window-caption>Beep Knobs</window-caption>
+    <window-buttons>
+      <window-button role="window-help">?</window-button>
+      <window-button role="window-minimize">🗕</window-button>
+      <window-button role="window-maximize">🗖</window-button>
+      <window-button role="window-close">✖</window-button>
+    </window-buttons>
+  </window-header>
+
+  <body>
+    <div #container>
+      <div .expander></div>
+      <div #knobs>
+        <div #knob-frequency .knob-container>
+          <input #frequency readonly>
+          <svg .band viewBox="0 0 75 75">
+            <circle cx="37.5" cy="37.5" r="29" stroke="#4ECCFF" stroke-width="11">
+          </svg>
+          <div .knob></div>
+          <svg .dot viewBox="0 0 75 75">
+            <circle cx="19" cy="37.5" r="3" fill="#4ECCFF">
+          </svg>
+          <div .knob-label>FREQUENCY</div>
+        </div>
+        <div #knob-volume .knob-container>
+          <input #volume readonly>
+          <svg .band viewBox="0 0 75 75">
+            <circle cx="37.5" cy="37.5" r="29" stroke="#4ECCFF" stroke-width="11">
+          </svg>
+          <div .knob></div>
+          <svg .dot viewBox="0 0 75 75">
+            <circle cx="19" cy="37.5" r="3" fill="#4ECCFF">
+          </svg>
+          <div .knob-label>VOLUME</div>
+        </div>
+        <div #knob-duration .knob-container>
+          <input #duration readonly>
+          <svg .band viewBox="0 0 75 75">
+            <circle cx="37.5" cy="37.5" r="29" stroke="#4ECCFF" stroke-width="11">
+          </svg>
+          <div .knob></div>
+          <svg .dot viewBox="0 0 75 75">
+            <circle cx="19" cy="37.5" r="3" fill="#4ECCFF">
+          </svg>
+          <div .knob-label>DURATION</div>
+        </div>
+      </div>
+      <div .expander></div>
+      <div #play-container>
+        <div .button #play>▷</div>
+        <div .play-label>PLAY</div>
+      </div>
+      <div .expander></div>
+    </div>
+  </body>
+
+</html>
