@@ -1,6 +1,5 @@
 import { $, $$ } from '@sciter';
 import moveableView from 'moveable-view.js';
-import snapshot from 'screenshot.js';
 
 Window.this.on('~statechange', function () {
   if (Window.this.state === Window.WINDOW_MAXIMIZED) {
