@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://github.com/girkovarpa/beep-knobs">
-    <img src="app/png/logo-75x75.png" alt="Beep Knobs" width="75"/>
+    <img src="app/png/logo-90x90.png" alt="Beep Knobs" width="90"/>
   </a>
   <br>
   <br>

@@ -79,7 +79,11 @@ function initKnob(selector, percentage) {
   updateKnob(selector, percentage);
 
   knob.on('mousewheel', function (evt) {
-    percentage += evt.deltaY > 0 ? -1 : 1;
+    if (selector === '#knob-duration') {
+      percentage += evt.deltaY > 0 ? -.1 : .1;
+    } else {
+      percentage += evt.deltaY > 0 ? -1 : 1;
+    }
     percentage = clampPercentage(percentage);
     updateKnob(selector, percentage);
   });
@@ -131,8 +135,13 @@ function initKnob(selector, percentage) {
     last_x = evt.x;
     last_y = evt.y;
     if (dragging) {
-      percentage += deltaX;
-      percentage -= deltaY;
+      if (selector === '#knob-duration') {
+        percentage += deltaX * .1;
+        percentage -= deltaY * .1;
+      } else {
+        percentage += deltaX;
+        percentage -= deltaY;
+      }
       percentage = clampPercentage(percentage);
       updateKnob(selector, percentage);
     }
